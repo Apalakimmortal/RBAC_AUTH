@@ -18,7 +18,13 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-const MongoStore = new connectMongo(session);
+// Init MongoStore
+const MongoStore = connectMongo.create({
+  mongoUrl: process.env.MONGODB_URI,
+  dbName: process.env.DB_NAME,
+  collectionName: 'sessions',
+});
+
 // Init Session
 app.use(
   session({
@@ -26,10 +32,10 @@ app.use(
     resave: false,
     saveUninitialized: false,
     cookie: {
-      // secure: true,
       httpOnly: true,
+      // secure: true, // Uncomment for HTTPS
     },
-    store: new MongoStore({ mongooseConnection: mongoose.connection }),
+    store: MongoStore, 
   })
 );
 
@@ -38,8 +44,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 require('./utils/passport.auth');
 
+// Middleware to ensure `user` is always available in views
 app.use((req, res, next) => {
-  res.locals.user = req.user;
+  res.locals.user = req.user || null; // Ensure `user` is always available
   next();
 });
 
@@ -74,8 +81,18 @@ app.use((req, res, next) => {
 app.use((error, req, res, next) => {
   error.status = error.status || 500;
   res.status(error.status);
-  res.render('error_40x', { error });
+  res.render('error_40x', { error, user: req.user }); // Pass user explicitly to the error page
 });
+
+// Ensure Admin Middleware
+function ensureAdmin(req, res, next) {
+  if (req.user && req.user.role === roles.admin) {
+    next();
+  } else {
+    req.flash('warning', 'You are not authorized to view this page.');
+    res.redirect('/');
+  }
+}
 
 // Setting the PORT
 const PORT = process.env.PORT || 3000;
@@ -84,29 +101,9 @@ const PORT = process.env.PORT || 3000;
 mongoose
   .connect(process.env.MONGODB_URI, {
     dbName: process.env.DB_NAME,
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
   })
   .then(() => {
-    console.log('💾 MongoDB connected...');
-
-    const MongoStore = connectMongo.create({
-      client: mongoose.connection.getClient(), // Use the native MongoDB client
-    });
-
-    app.use(
-      session({
-        secret: process.env.SESSION_SECRET,
-        resave: false,
-        saveUninitialized: false,
-        cookie: {
-          httpOnly: true,
-          // secure: true, // Uncomment if using HTTPS
-        },
-        store: MongoStore,
-      })
-    );
-
+    console.log('MongoDB connected...');
     startServer();
   })
   .catch((err) => {
@@ -115,35 +112,7 @@ mongoose
   });
 
 function startServer() {
-  const PORT = process.env.PORT || 3000;
   app.listen(PORT, () => {
-    console.log(`🚀 Server running at http://localhost:${PORT}`);
+    console.log(`Server running at http://localhost:${PORT}`);
   });
-}
-
-
-// function ensureAuthenticated(req, res, next) {
-//   if (req.isAuthenticated()) {
-//     next();
-//   } else {
-//     res.redirect('/auth/login');
-//   }
-// }
-
-function ensureAdmin(req, res, next) {
-  if (req.user.role === roles.admin) {
-    next();
-  } else {
-    req.flash('warning', 'you are not Authorized to see this route');
-    res.redirect('/');
-  }
-}
-
-function ensureModerator(req, res, next) {
-  if (req.user.role === roles.moderator) {
-    next();
-  } else {
-    req.flash('warning', 'you are not Authorized to see this route');
-    res.redirect('/');
-  }
 }
