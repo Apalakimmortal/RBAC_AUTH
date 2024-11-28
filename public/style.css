@@ -31,7 +31,7 @@ nav>ul>li {
 nav>ul>li>a,
 a {
     text-decoration: none;
-    color: #db2777;
+    color: #b727db;
     padding: 8px 16px;
     border-radius: 8px;
 }
@@ -102,7 +102,7 @@ form.lg-form {
 
 .lg-form input[type='submit'] {
     margin: 16px 0;
-    background-color: #db2777;
+    background-color: #9c27db;
     color: #fff;
     cursor: pointer;
 }
@@ -136,7 +136,7 @@ thead {
 
 thead tr {
     border-radius: 8px;
-    background-color: #db2777;
+    background-color: #a227db;
     overflow: hidden;
 }
 
@@ -169,7 +169,7 @@ tbody tr td {
 
 .manage-user-form input[type='submit'] {
     background: transparent;
-    color: #db2777;
+    color: #9327db;
     border: none;
     outline: none;
     padding: 8px 16px;
