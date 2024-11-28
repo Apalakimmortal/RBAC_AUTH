@@ -24,7 +24,7 @@ This project is built using **Node.js**, **Express.js**, **EJS**, **Passport**, 
 <table>
   <tr>
     <td style="text-align: center;">
-      <img src="https://example.com/login.jpg" alt="Login Page" width="200"/>
+      <img src="https://github.com/Apalakimmortal/RBAC_AUTH/blob/main/public/image/login.jpeg" alt="Login Page" width="200"/>
       <p>Login Page</p>
     </td>
     <td style="text-align: center;">
