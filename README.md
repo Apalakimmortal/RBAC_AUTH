@@ -24,32 +24,44 @@ This project is built using **Node.js**, **Express.js**, **EJS**, **Passport**, 
 <table>
   <tr>
     <td style="text-align: center;">
-      <img src="https://github.com/Apalakimmortal/RBAC_AUTH/blob/main/public/image/login.jpeg" alt="Login Page" width="500"/>
+      <img src="https://github.com/Apalakimmortal/RBAC_AUTH/blob/main/public/image/login.jpeg" alt="Login Page" width="5000"/>
       <p>Login Page</p>
     </td>
   </tr>
   <tr>
     <td style="text-align: center;">
-      <img src="https://github.com/Apalakimmortal/RBAC_AUTH/blob/main/public/image/home_page.jpeg" alt="Home Page" width="500"/>
+      <img src="https://github.com/Apalakimmortal/RBAC_AUTH/blob/main/public/image/home_page.jpeg" alt="Home Page" width="5000"/>
       <p>Home Page</p>
     </td>
   </tr>
   <tr>
     <td style="text-align: center;">
-      <img src="https://example.com/register.jpg" alt="Register Page" width="500"/>
+      <img src="https://github.com/Apalakimmortal/RBAC_AUTH/blob/main/public/image/register.jpeg" alt="Home Page" width="5000"/>
       <p>Register Page</p>
     </td>
   </tr>
   <tr>
     <td style="text-align: center;">
-      <img src="https://example.com/profile.jpg" alt="Profile Page" width="500"/>
+      <img src="https://github.com/Apalakimmortal/RBAC_AUTH/blob/main/public/image/logedin_home.jpeg" alt="Home Page" width="5000"/>
+      <p>Login In Home Page</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">
+      <img src="https://github.com/Apalakimmortal/RBAC_AUTH/blob/main/public/image/admin_home.jpeg" alt="Home Page" width="5000"/>
+      <p>Admin Home Page</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">
+      <img src="https://github.com/Apalakimmortal/RBAC_AUTH/blob/main/public/image/profile.jpeg" alt="Home Page" width="5000"/>
       <p>Profile Page</p>
     </td>
   </tr>
   <tr>
     <td style="text-align: center;">
-      <img src="https://example.com/manage-users.jpg" alt="Manage Users Page" width="500"/>
-      <p>Manage Users Page</p>
+      <img src="https://github.com/Apalakimmortal/RBAC_AUTH/blob/main/public/image/manage_user.jpeg" alt="Home Page" width="5000"/>
+      <p>Manage User Page</p>
     </td>
   </tr>
 </table>
