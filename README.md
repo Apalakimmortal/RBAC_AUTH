@@ -28,8 +28,8 @@ This project is built using **Node.js**, **Express.js**, **EJS**, **Passport**, 
       <p>Login Page</p>
     </td>
     <td style="text-align: center;">
-      <img src="https://example.com/logout.jpg" alt="Logout Page" width="200"/>
-      <p>Logout Page</p>
+      <img src="https://github.com/Apalakimmortal/RBAC_AUTH/blob/main/public/image/home.jpeg" alt="Logout Page" width="200"/>
+      <p>HomePage</p>
     </td>
     <td style="text-align: center;">
       <img src="https://example.com/register.jpg" alt="Register Page" width="200"/>
