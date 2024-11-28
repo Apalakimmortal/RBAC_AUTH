@@ -24,29 +24,36 @@ This project is built using **Node.js**, **Express.js**, **EJS**, **Passport**, 
 <table>
   <tr>
     <td style="text-align: center;">
-      <img src="https://github.com/Apalakimmortal/RBAC_AUTH/blob/main/public/image/login.jpeg" alt="Login Page" width="5000"/>
+      <img src="https://github.com/Apalakimmortal/RBAC_AUTH/blob/main/public/image/login.jpeg" alt="Login Page" width="500"/>
       <p>Login Page</p>
     </td>
+  </tr>
+  <tr>
     <td style="text-align: center;">
-      <img src="https://github.com/Apalakimmortal/RBAC_AUTH/blob/main/public/image/home_page.jpeg" alt="Logout Page" width="5000"/>
-      <p>HomePage</p>
+      <img src="https://github.com/Apalakimmortal/RBAC_AUTH/blob/main/public/image/home_page.jpeg" alt="Home Page" width="500"/>
+      <p>Home Page</p>
     </td>
+  </tr>
+  <tr>
     <td style="text-align: center;">
-      <img src="https://example.com/register.jpg" alt="Register Page" width="200"/>
+      <img src="https://example.com/register.jpg" alt="Register Page" width="500"/>
       <p>Register Page</p>
     </td>
   </tr>
   <tr>
     <td style="text-align: center;">
-      <img src="https://example.com/profile.jpg" alt="Profile Page" width="200"/>
+      <img src="https://example.com/profile.jpg" alt="Profile Page" width="500"/>
       <p>Profile Page</p>
     </td>
+  </tr>
+  <tr>
     <td style="text-align: center;">
-      <img src="https://example.com/manage-users.jpg" alt="Manage Users Page" width="200"/>
+      <img src="https://example.com/manage-users.jpg" alt="Manage Users Page" width="500"/>
       <p>Manage Users Page</p>
     </td>
   </tr>
 </table>
+
 
 ## Installation
 
